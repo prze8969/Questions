@@ -1,3 +1,8 @@
+import sys
+input = sys.stdin.readline
+# Reads the entire input at once (fastest)
+# OR if you need line-by-line:
+# input = 
 x1=0
 y1=0
  
