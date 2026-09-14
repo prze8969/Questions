@@ -1,18 +1,38 @@
+def withoutai(n,x,y):
+    hr = 0
+    while(n>0):
+        lin = x+y
+        n-=lin
+        hr+=1
+    return hr
+ 
+def withai(n,x,y,z):
+    hr = 0
+    while(n>0):
+        if(z<=0):
+            lin = x+10*y
+            n-=lin
+        else:
+            lin = x
+            n-=lin
+            z-=1
+        hr+=1
+    return hr
+ 
+ 
 t = int(input())
-def sumlin(l):
-    sum =0
-    for i in range(len(l)):
-        sum+=l[i]
-    return sum
-        
  
 for i in range(t):
-    n = int(input())
-    lin = input().split()
-    lin = [int(x) for x in lin]
-    for i in range(n):
-        for j in range(i+1,n):
-            if lin[i]<lin[j]:
-                lin[j] = lin[i]
-    print(sumlin(lin))
-    
+    l = input()
+    l = l.strip().split()
+    l = [int(x) for x in l]
+    n = l[0]
+    x = l[1]
+    y = l[2]
+    z = l[3]
+    woai = withoutai(n,x,y)
+    wai = withai(n,x,y,z)
+    if(woai>wai):
+        print(wai)
+    else:
+        print(woai)
