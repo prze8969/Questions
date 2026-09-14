@@ -1,27 +1,23 @@
-#include <bits/stdc++.h>
-using namespace std;
-int main()
-{
-    int x_sum = 0;
-    int y_sum = 0;
-    int z_sum = 0;
-    int n;
-    cin >> n;
+import sys
+input = sys.stdin.readline
+# Reads the entire input at once (fastest)
+# OR if you need line-by-line:
+# input = 
+x1=0
+y1=0
  
-    for (int i = 0; i < n; i++)
-    {
-        int x, y, z;
-        cin >> x >> y >> z;
-        x_sum += x;
-        y_sum += y;
-        z_sum += z;
-    }
-    if (x_sum == 0 && y_sum == 0 && z_sum == 0)
-    {
-        cout << "YES";
-    }
-    else
-    {
-        cout << "NO";
-    }
-}
+for i in range(5):
+    lin = input()
+    lin = lin.split()
+    lin = [int(x) for x in lin]
+    for j in range(len(lin)):
+        if lin[j]==1:
+            x1=j
+            y1=i
+        upness=abs(2-y1)
+        leness=abs(2-x1)
+ 
+print(upness+leness)
+ 
+ 
+ 
