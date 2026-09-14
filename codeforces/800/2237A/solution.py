@@ -5,7 +5,7 @@ def sumlin(l):
         sum+=l[i]
     return sum
         
- 
+ 
 for i in range(t):
     n = int(input())
     lin = input().split()
@@ -15,4 +15,3 @@ for i in range(t):
             if lin[i]<lin[j]:
                 lin[j] = lin[i]
     print(sumlin(lin))
-    
