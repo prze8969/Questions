@@ -1,28 +1,27 @@
-t = int(input())
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int x_sum = 0;
+    int y_sum = 0;
+    int z_sum = 0;
+    int n;
+    cin >> n;
  
-def findmed(arr):
-    n = len(arr)
-    if n%2!=0:
-        return arr[n//2]
-    else:
-        mid1 = arr[n//2 - 1]
-        mid2 = arr[n//2]
-        return mid1
- 
-for i in range(t):
-    n = int(input())
-    lin = input().split()
-    less=[]
-    more=[]
-    lin = [int(x) for x in lin]
-    lin = sorted(lin)
-    l = len(lin)
-    m = findmed(lin)
-    for i in range(len(lin)):
-        if lin[i] < m:
-            less.append(lin[i])
-        elif lin[i] > m:
-            more.append(lin[i])
-    ans = max(len(less), len(more))
-    print(ans)
- 
+    for (int i = 0; i < n; i++)
+    {
+        int x, y, z;
+        cin >> x >> y >> z;
+        x_sum += x;
+        y_sum += y;
+        z_sum += z;
+    }
+    if (x_sum == 0 && y_sum == 0 && z_sum == 0)
+    {
+        cout << "YES";
+    }
+    else
+    {
+        cout << "NO";
+    }
+}
